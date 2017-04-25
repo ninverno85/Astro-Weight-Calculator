@@ -1,4 +1,4 @@
-// Adding the planets array
+//Adding the planets array
 var planets = [
   ['Pluto', 0.06],
   ['Neptune', 1.148],
@@ -23,3 +23,25 @@ for (i=0; i<planets.length;i++){
   opt.textContent = planetName;
   select.appendChild(opt);
 }
+
+
+//Adding core business logic
+document.getElementById('singlebutton').onclick = function handleClickEvent(ev){
+  alert('Hello!');
+  var userWeight = document.getElementById('userWeight').value;
+  var userChoice = document.getElementById('planets').selectedIndex;
+  var gravity = document.getElementById('planets').value;
+  var planetWeight = Math.round((userWeight * gravity) * 100) / 100;
+
+  console.log('Your ' + 'weight ' + 'on ' + 'planet ' + userChoice + ' is ' + planetWeight + '!');
+  var story = 'Your ' + 'weight ' + 'on ' + 'planet ' + userChoice + ' is ' + planetWeight + '!';
+  document.getElementById("output").innerHTML = story;
+  }
+
+
+
+
+
+//var planetName = document.getElementById('planetSelect').options[userChoice];
+//var sel(Index) = document.getElementById('plenetSelect').selectIndex;
+//var selGravity = document.getElementById('planetSelect')[select index].value
