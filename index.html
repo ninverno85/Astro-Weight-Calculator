@@ -3,30 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Astro Weight Calculator</title>
-
+  <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
-      <legend>AstroWeight Calculator</legend>
+<div id = "page-wrap">
+      <h1>AstroWeight Calculator</h1>
     <!-- Write your markup here -->
 <input id="userWeight" type="text" placeholder="Weight (lbs)" />
 
     <!-- Dropdown function -->
         <form id="myForm">
-          <select id="planetSelect">
+          <select id="planets">
           <option>"Choose Planet"</option>
         </select>
       </form>
 
       <!-- Button -->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="singlebutton">Calculate Weight</label>
+          <label class="col-md-4 control-label" for="singlebutton">
+            <h2>Calculate Weight</h2>
+          </label>
           <div class="col-md-4">
-            <button id="calculateWeight" name="singlebutton" class="btn btn-primary" onclick="calculateWeight()">Button</button>
+            <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="calculateWeight()">Boom!</button>
           </div>
         </div>
 
-        <p id="output"></p>
+
+     <p id="output"></p>
+</div>
     <!-- Don't forget to add your <script> tag here -->
     <script src="main.js"></script>
   </body>

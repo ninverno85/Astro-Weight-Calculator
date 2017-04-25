@@ -13,7 +13,7 @@ var planets = [
   ['Sun', 27.9]
 ];
 
-var select = document.getElementById('planetSelect');
+var select = document.getElementById('planets');
 for (i=0; i<planets.length;i++){
   var planetName = planets[i][0];
   var opt = document.createElement('option')
@@ -23,13 +23,21 @@ for (i=0; i<planets.length;i++){
   select.appendChild(opt);
 }
 
-document.getElementById('calculateWeight').onclick = function handleClickEvent(ev){
+function calculateWeight() {
+document.getElementById('singlebutton').onclick = function handleClickEvent(ev){
   alert('Hello!');
   var userWeight = document.getElementById('userWeight').value;
-  var userChoice = document.getElementById('planetSelect').selectedIndex;
-  var gravity = document.getElementById('planetSelect').value;
-  console.log('Your ' + 'weight ' + 'on ' + 'planet ' + userChoice + ' is ' + (userWeight * gravity) + '!');
+  var userChoice = document.getElementById('planets').selectedIndex;
+  var gravity = document.getElementById('planets').value;
+  var planetWeight = Math.round((userWeight * gravity) * 100) / 100;
+
+  console.log('Your ' + 'weight ' + 'on ' + 'planet ' + userChoice + ' is ' + planetWeight + '!');
+  var story = 'Your ' + 'weight ' + 'on ' + 'planet ' + userChoice + ' is ' + planetWeight + '!';
+  document.getElementById("output").innerHTML = story;
+  }
 }
+
+
 
 
 //var planetName = document.getElementById('planetSelect').options[userChoice];
