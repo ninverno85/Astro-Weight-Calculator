@@ -23,7 +23,6 @@ for (i=0; i<planets.length;i++){
   select.appendChild(opt);
 }
 
-function calculateWeight() {
 document.getElementById('singlebutton').onclick = function handleClickEvent(ev){
   alert('Hello!');
   var userWeight = document.getElementById('userWeight').value;
@@ -35,11 +34,3 @@ document.getElementById('singlebutton').onclick = function handleClickEvent(ev){
   var story = 'Your ' + 'weight ' + 'on ' + 'planet ' + userChoice + ' is ' + planetWeight + '!';
   document.getElementById("output").innerHTML = story;
   }
-}
-
-
-
-
-//var planetName = document.getElementById('planetSelect').options[userChoice];
-//var sel(Index) = document.getElementById('plenetSelect').selectIndex;
-//var selGravity = document.getElementById('planetSelect')[select index].value
