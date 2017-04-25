@@ -12,25 +12,3 @@ var planets = [
   ['Mercury', 0.377],
   ['Sun', 27.9]
 ];
-
-var select = document.getElementById('planets');
-for (i=0; i<planets.length;i++){
-  var planetName = planets[i][0];
-  var opt = document.createElement('option')
-  opt.innerText = planets[i][0];
-  opt.value = planets[i][1];
-  opt.textContent = planetName;
-  select.appendChild(opt);
-}
-
-document.getElementById('singlebutton').onclick = function handleClickEvent(ev){
-  alert('Hello!');
-  var userWeight = document.getElementById('userWeight').value;
-  var userChoice = document.getElementById('planets').selectedIndex;
-  var gravity = document.getElementById('planets').value;
-  var planetWeight = Math.round((userWeight * gravity) * 100) / 100;
-
-  console.log('Your ' + 'weight ' + 'on ' + 'planet ' + userChoice + ' is ' + planetWeight + '!');
-  var story = 'Your ' + 'weight ' + 'on ' + 'planet ' + userChoice + ' is ' + planetWeight + '!';
-  document.getElementById("output").innerHTML = story;
-  }
