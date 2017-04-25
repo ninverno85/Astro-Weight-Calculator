@@ -6,11 +6,11 @@ var planets = [
   ['Saturn', 1.139],
   ['Jupiter', 2.640],
   ['Mars', 0.3895],
-  ['Moon', 0.1655],
+  ['the Moon', 0.1655],
   ['Earth', 1],
   ['Venus', 0.9032],
   ['Mercury', 0.377],
-  ['Sun', 27.9]
+  ['the Sun', 27.9]
 ];
 
 //Adding code to dynamically generate planets dropdown
@@ -38,7 +38,7 @@ document.getElementById('calculateWeight').onclick = function handleClickEvent(e
    round that result to two decimal places */
   var planetWeight = Math.round(userWeight * gravity);
   // Printing to the story variable to display the results for the user to view.
-  var story = 'Your ' + 'weight ' + 'on ' + planetName + ' is ' + planetWeight + '!';
+  var story = 'Your ' + 'weight ' + 'on ' + planetName + ' is ' + planetWeight  + 'lbs!';
   document.getElementById("output").innerHTML = story;
 }
 

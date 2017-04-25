@@ -10,7 +10,7 @@ body {
 
 #page-wrap {
   display: inline-block;
-  margin: 30% auto;
+  margin: 20% auto;
   text-align: center;
 }
 
@@ -25,14 +25,6 @@ h1, h2, p {
   color: #00FFFF;
 }
 
-h1 {
-  font-family: 'Changa One', sans-serif;
-  margin: 15px 0;
-  font-size: 3.0em;
-  font-weight: bolder;
-  line-height: 0.8em;
-}
-
 h2 {
   ont-family: 'Changa One', sans-serif;
   margin: 15px 0;
@@ -43,8 +35,21 @@ h2 {
 
 p {
   ont-family: 'Changa One', sans-serif;
-  margin: 15px 0;
   font-size: 1.75em;
   font-weight: normal;
   line-height: 0.8em;
+  text-align: center;
+  display: inline-block;
+  margin: 20% auto;
+  background-color: #FF0000;
+}
+
+button {
+  text-align: center;
+  margin: auto;
+}
+
+option {
+  text-align: center;
+  margin: auto;
 }
