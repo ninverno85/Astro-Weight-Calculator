@@ -15,7 +15,7 @@ var planets = [
 
 //Adding code to dynamically generate planets dropdown
 var select = document.getElementById('planets');
-for (i=0; i<planets.length;i++){
+for (i = 0; i < planets.length; i++) {
   var planetName = planets[i][0];
   var opt = document.createElement('option')
   opt.innerText = planets[i][0];
@@ -24,26 +24,29 @@ for (i=0; i<planets.length;i++){
   select.appendChild(opt);
 }
 
+/*Adding core business logic.
+    The following function is used to calculateWeight*/
 
-//Adding core business logic
-function calculateWeight() {
-document.getElementById('singlebutton').onclick = function handleClickEvent(ev){
-  alert('Hello!');
+document.getElementById('calculateWeight').onclick = function handleClickEvent(ev) {
+  // Making variables for the user input of weight and a planet
   var userWeight = document.getElementById('userWeight').value;
   var userChoice = document.getElementById('planets').selectedIndex;
+  var planetName = document.getElementById('planets').options[userChoice].text;
+  // Making the gravity variable based on which planet the user selects.
   var gravity = document.getElementById('planets').value;
-  var planetWeight = Math.round((userWeight * gravity) * 100) / 100;
-
-  console.log('Your ' + 'weight ' + 'on ' + 'planet ' + userChoice + ' is ' + planetWeight + '!');
-  var story = 'Your ' + 'weight ' + 'on ' + 'planet ' + userChoice + ' is ' + planetWeight + '!';
+  /* Makeing a variable for the weight on the planet the user would select
+   round that result to two decimal places */
+  var planetWeight = Math.round(userWeight * gravity);
+  // Printing to the story variable to display the results for the user to view.
+  var story = 'Your ' + 'weight ' + 'on ' + planetName + ' is ' + planetWeight + '!';
   document.getElementById("output").innerHTML = story;
-  }
 }
 
 
 
 
 
-//var planetName = document.getElementById('planetSelect').options[userChoice];
+
+//var planetName = document.getElementById('planets').options[userChoice];
 //var sel(Index) = document.getElementById('plenetSelect').selectIndex;
 //var selGravity = document.getElementById('planetSelect')[select index].value
